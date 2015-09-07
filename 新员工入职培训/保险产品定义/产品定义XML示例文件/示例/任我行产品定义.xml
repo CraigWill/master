@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="GBK"?>
+<product kind="Marketable Product" name="任我行意外伤害保险" description="任我行交通意外伤害保险"
+	seqIndex="0" externalReference="0029" lineOfBusiness="PROPERTY"
+	groupType="PERSONAL" shortName="任我行" instanceClassName="InsurancePolicy">
+	<baseSpec version="0" />
+	<properties>
+		<property kind="policyNumber" name="保单号" description=""
+			seqIndex="100" dataType="String" beanProperty="true" isHidden="false"
+			required="false" derived="false" defaultValue="" group="Base"
+			allowedValues="" />
+		<property kind="inceptionDate" name="生效日期" description=""
+			seqIndex="200" dataType="Date" beanProperty="true" isHidden="false"
+			required="false" derived="false" defaultValue="" group="Base"
+			allowedValues="" />
+		<property kind="plannedEndDate" name="保单止期" description=""
+			seqIndex="300" dataType="Date" beanProperty="true" isHidden="false"
+			required="false" derived="false" defaultValue="" group="Base"
+			allowedValues="" />
+		<property kind="unitCount" name="保险份数" description=""
+			seqIndex="400" dataType="Integer" beanProperty="true" isHidden="false"
+			required="true" derived="false" defaultValue="" group="Base" />
+		<property kind="premium" name="基本保费" seqIndex="500" dataType="Decimal"
+			beanProperty="true" isHidden="false" required="false" derived="false" />
+		<property kind="insuredAmount" name="基本保额" seqIndex="600"
+			dataType="Decimal" beanProperty="true" isHidden="false" required="false"
+			derived="false" />
+		<property kind="totalInsuredAmount" name="总保额" seqIndex="700"
+			dataType="Decimal" beanProperty="false" isHidden="false" required="false"
+			derived="false" />
+		<property kind="grossPremium" name="总保费" seqIndex="800"
+			dataType="Decimal" beanProperty="true" isHidden="false" required="false"
+			derived="false" />
+		<property kind="paymentMode" name="缴费方式" seqIndex="900"
+			dataType="PaymentMode" beanProperty="true" required="false" derived="true"
+			defaultValue="'SINGLE'" group="Base" />
+		<property kind="paymentDurationMode" name="缴费期间类型" seqIndex="1000"
+			dataType="PaymentDurationMode" beanProperty="true" required="false"
+			derived="true" defaultValue="'SINGLE'" group="Base" />
+		<property kind="paymentDuration" name="缴费期数" seqIndex="1100"
+			dataType="Integer" beanProperty="true" required="false" derived="true"
+			group="Base" />
+		<property kind="benefitDurationMode" name="保障期间类型" seqIndex="1200"
+			dataType="BenefitDurationMode" beanProperty="true" required="false"
+			derived="true" defaultValue="'DAILY'" group="Base" />
+		<property kind="benefitDuration" name="保障期数" seqIndex="1300"
+			dataType="Integer" beanProperty="true" required="false" derived="true"
+			group="Base" />
+		<property kind="appSignedDate" name="投保日期" seqIndex="1400"
+			dataType="Timestamp" beanProperty="true" required="false" derived="false"
+			group="Base" />
+		<property kind="deliveryReceiptDate" name="出单时间" seqIndex="1500"
+			dataType="Timestamp" beanProperty="true" required="false" derived="false"
+			group="Base" />
+		<property kind="issueDate" name="生效日期" seqIndex="1600"
+			dataType="Timestamp" beanProperty="true" required="false" derived="false"
+			group="Base" />
+		<property kind="vehicleMode" name="交通工具" seqIndex="1000"
+			dataType="VehicleMode" beanProperty="true" required="false" derived="true"
+			defaultValue="'CAR'" group="Base"></property>
+	</properties>
+	<roles>
+		<role kind="Insured" name="被保人" description="" seqIndex="0"
+			minOccurrence="1" maxOccurrence="1" instanceClassName="PolicyPersonRole">
+			<properties>
+				<property kind="relatedToApplicantCode" name="投被保人关系"
+					description="" seqIndex="50" dataType="RelatedToRoleCode"
+					beanProperty="false" isHidden="false" required="true"
+					requiredExperession="" derived="false" defaultValue="'SELF'" group="Base" />
+				<property kind="fullName" name="被保人姓名" seqIndex="100"
+					dataType="String" beanProperty="true" isHidden="false" required="true"
+					derived="false" group="Base" maxLength="20" />
+				<property kind="gender" name="被保人性别" seqIndex="200"
+					dataType="Gender" beanProperty="true" isHidden="false" required="true"
+					derived="false" group="Base" />
+				<property kind="idType" name="证件类型" description=""
+					seqIndex="300" dataType="IdType" beanProperty="true" isHidden="false"
+					required="true" derived="false" defaultValue="'SOCIAL_SECURITY_CARD'"
+					group="Base" allowedValues="" />
+				<property kind="idNumber" name="证件号码" seqIndex="350"
+					dataType="String" beanProperty="true" isHidden="false" required="true"
+					derived="false" group="Base" maxLength="20" />
+				<property kind="birthDate" name="出生日期" seqIndex="360"
+					dataType="Date" beanProperty="true" isHidden="false" required="true"
+					derived="false" defaultValue="" group="Base,Quote" allowedValues=""
+					maxLength="10" />
+				<property kind="phoneNumber" name="联系电话" seqIndex="370"
+					dataType="String" beanProperty="true" isHidden="false" required="true"
+					derived="false" group="Base" maxLength="20" />
+				<property kind="postalAddress" name="住址" seqIndex="900"
+					dataType="String" beanProperty="false" isHidden="false" required="true"
+					derived="false" group="Base" allowedValues="" />
+				<property kind="email" name="电子邮件" seqIndex="950" dataType="String"
+					beanProperty="true" isHidden="false" required="true" derived="false"
+					group="Base" allowedValues="" />
+				<property kind="postalCode" name="邮政编码" seqIndex="1000"
+					dataType="String" beanProperty="false" isHidden="false" required="false"
+					derived="false" group="Base" maxLength="20" />
+				<property kind="occupationDescription" name="职业类别"
+					seqIndex="950" dataType="String" beanProperty="true" isHidden="false"
+					required="false" derived="false" group="Base" allowedValues="" />
+				<property kind="province" name="所在省" seqIndex="950"
+					dataType="String" beanProperty="false" isHidden="false" required="false"
+					derived="false" group="Base" allowedValues="" />
+				<property kind="city" name="所在市" seqIndex="950" dataType="String"
+					beanProperty="false" isHidden="false" required="false" derived="false"
+					group="Base" allowedValues="" />
+			</properties>
+
+		</role>
+		<role kind="Applicant" name="投保人" description="" seqIndex="0"
+			minOccurrence="1" maxOccurrence="1" instanceClassName="PolicyPersonRole">
+			<properties>
+				<property kind="fullName" name="姓名" seqIndex="100"
+					dataType="String" beanProperty="true" isHidden="false" required="true"
+					derived="false" group="Base" maxLength="120" />
+				<property kind="gender" name="性别" seqIndex="0" dataType="Gender"
+					beanProperty="true" isHidden="false" required="true" derived="false"
+					group="Base" />
+				<property kind="idType" name="证件类型" description=""
+					seqIndex="300" dataType="IdType" beanProperty="true" isHidden="false"
+					required="true" derived="false" defaultValue="SOCIAL_SECURITY_CARD"
+					group="Base" allowedValues="" />
+				<property kind="idNumber" name="证件号码" seqIndex="350"
+					dataType="String" beanProperty="true" isHidden="false" required="true"
+					derived="false" group="Base" maxLength="20" />
+				<property kind="birthDate" name="出生日期" seqIndex="360"
+					dataType="Date" beanProperty="true" isHidden="false" required="true"
+					derived="false" defaultValue="" group="Base,Quote" allowedValues=""
+					maxLength="10" />
+				<property kind="phoneNumber" name="联系电话" seqIndex="370"
+					dataType="String" beanProperty="true" isHidden="false" required="true"
+					derived="false" group="Base" maxLength="20" />
+				<property kind="postalAddress" name="住址" seqIndex="900"
+					dataType="String" beanProperty="false" isHidden="false" required="true"
+					derived="false" group="Base" allowedValues="" />
+				<property kind="email" name="电子邮件" seqIndex="950" dataType="String"
+					beanProperty="false" isHidden="false" required="true" derived="false"
+					group="Base" allowedValues="" />
+				<property kind="postalCode" name="邮政编码" seqIndex="380"
+					dataType="String" beanProperty="false" isHidden="false" required="false"
+					derived="false" group="Base" maxLength="20" />
+				<property kind="occupationDescription" name="职业类别"
+					seqIndex="950" dataType="String" beanProperty="true" isHidden="false"
+					required="false" derived="false" group="Base" allowedValues="" />
+				<property kind="province" name="所在省" seqIndex="950"
+					dataType="String" beanProperty="false" isHidden="false" required="false"
+					derived="false" group="Base" allowedValues="" />
+				<property kind="city" name="所在市" seqIndex="950" dataType="String"
+					beanProperty="false" isHidden="false" required="false" derived="false"
+					group="Base" allowedValues="" />
+			</properties>
+			<rules>
+				<rule kind="Eligibility" name="投保人年龄限制" seqIndex="0" language="GROOVY">
+					<body>
+						<![CDATA[
+							return context.getAge() >= 65
+						]]>
+					</body>
+					<commentOnFailure>投保人年龄必须大于18岁!</commentOnFailure>
+				</rule>
+			</rules>
+		</role>
+		<role kind="Beneficiary" name="受益人" seqIndex="0" minOccurrence="0"
+			maxOccurrence="10" instanceClassName="PolicyPersonRole">
+			<properties>
+				<property kind="beneficiaryRelatedToInsured" name="受益人与投保人关系"
+					description="" seqIndex="50" dataType="RelatedToRoleCode"
+					beanProperty="false" isHidden="false" required="true" derived="false"
+					defaultValue="SELF" group="Base" />
+				<property kind="fullName" name="受益人姓名" seqIndex="100"
+					dataType="String" beanProperty="true" isHidden="true" required="false"
+					derived="false" group="Base" />
+				<property kind="gender" name="受益人性别" seqIndex="200"
+					dataType="Gender" beanProperty="true" isHidden="true" required="false"
+					derived="false" group="Base" />
+				<property kind="idType" name="受益人证件类型" seqIndex="300"
+					dataType="IdType" beanProperty="true" isHidden="true" required="true"
+					derived="false" group="Base" />
+				<property kind="idNumber" name="受益人证件号码" seqIndex="350"
+					dataType="String" beanProperty="true" isHidden="true" required="true"
+					derived="false" group="Base" />
+				<property kind="birthDate" name="受益人出生日期" seqIndex="360"
+					dataType="Date" beanProperty="true" isHidden="false" required="true"
+					derived="false" defaultValue="" group="Base" allowedValues=""
+					maxLength="10" />
+				<property kind="phoneNumber" name="受益人联系电话" seqIndex="400"
+					dataType="String" beanProperty="false" isHidden="true" required="false"
+					derived="false" group="Base" />
+				<property kind="postalAddress" name="受益人住址" seqIndex="900"
+					dataType="String" beanProperty="false" isHidden="false" required="false"
+					derived="false" group="Base" allowedValues="" />
+				<property kind="email" name="受益人电子邮件" seqIndex="900"
+					dataType="String" beanProperty="false" isHidden="false" required="false"
+					derived="false" group="Base" allowedValues="" />
+				<property kind="beneficiaryType" name="受益人类型/顺位" seqIndex="450"
+					dataType="BeneficiaryType" beanProperty="true" isHidden="true"
+					required="true" derived="true" defaultValue="BeneficiaryLegal"
+					allowedValues="BeneficiaryLegal" group="Base" />
+				<property kind="benefitPercent" name="受益比例" seqIndex="500"
+					dataType="Integer" beanProperty="false" isHidden="true" required="false"
+					derived="false" />
+				<property kind="postalCode" name="邮政编码" seqIndex="380"
+					dataType="String" beanProperty="false" isHidden="false" required="false"
+					derived="false" group="Base" maxLength="20" />
+				<property kind="occupationDescription" name="职业类别"
+					seqIndex="950" dataType="String" beanProperty="true" isHidden="false"
+					required="false" derived="false" group="Base" allowedValues="" />
+				<property kind="province" name="所在省" seqIndex="950"
+					dataType="String" beanProperty="false" isHidden="false" required="false"
+					derived="false" group="Base" allowedValues="" />
+				<property kind="city" name="所在市" seqIndex="950" dataType="String"
+					beanProperty="false" isHidden="false" required="false" derived="false"
+					group="Base" allowedValues="" />
+			</properties>
+		</role>
+		<role kind="SellingChannel" name="销售渠道" seqIndex="0"
+			minOccurrence="0" maxOccurrence="1" instanceClassName="PolicyPersonRole">
+			<properties>
+				<property kind="intermediaryCode" name="中介网点代码"
+					description="" seqIndex="200" dataType="String" beanProperty="false"
+					isHidden="true" required="true" derived="false" defaultValue=""
+					group="" allowedValues="" />
+				<property kind="agentCode" name="代理人代码" seqIndex="200"
+					dataType="String" beanProperty="false" isHidden="true" required="true"
+					derived="false" group="Base" />
+			</properties>
+		</role>
+	</roles>
+	<rules>
+		<rule kind="Eligibility" name="保障期限限制" seqIndex="0" language="GROOVY">
+			<body><![CDATA[return context.benefitDuration <=365;]]>
+			</body>
+			<commentOnFailure>保障期限为1~365天</commentOnFailure>
+
+		</rule>
+		<rule kind="Eligibility" name="生效日期限制" seqIndex="3" language="GROOVY">
+			<body><![CDATA[return new Date().before(context.getSmfProperty("inceptionDate"))]]></body>
+			<commentOnFailure>生效日期必须在投保日期之后</commentOnFailure>
+		</rule>
+		<rule kind="Eligibility" name="缴费方式限制" seqIndex="1" language="GROOVY">
+			<body>
+				<![CDATA[
+				return context.getPaymentMode() == com.siebre.policy.enums.PaymentMode.SINGLE;
+                 ]]>
+			</body>
+			<commentOnFailure>本合同缴费方式为一次性缴清</commentOnFailure>
+		</rule>
+		<rule kind="Eligibility" name="最低保额限制" seqIndex="1" language="GROOVY">
+			<body>
+				<![CDATA[
+					return context.getInsuredAmount() <= 10000;
+				 ]]>
+			</body>
+			<commentOnFailure>本险种最低保额1万元</commentOnFailure>
+		</rule>
+		<rule kind="Eligibility" name="最高保额限制" seqIndex="1" language="GROOVY">
+			<body>
+				<![CDATA[
+				if(context.getVehicleMode() != com.siebre.policy.enums.VehicleMode.CAR
+					 || context.getVehicleMode() != com.siebre.policy.enums.VehicleMode.TRAN_SHIP
+					 || context.getVehicleMode() != com.siebre.policy.enums.VehicleMode.AIR)
+				VehicleMode
+				switch(context.getVehicleMode()){
+				case com.siebre.policy.enums.VehicleMode.CAR:
+					return context.getInsuredAmount() <= 100000;
+					break;
+				case com.siebre.policy.enums.VehicleMode.TRAN_SHIP:
+					return context.getInsuredAmount() <= 200000;
+					break;
+				case com.siebre.policy.enums.VehicleMode.AIR:
+					return context.getInsuredAmount() > 2000000;
+				default :
+					return false;
+				]]>
+
+			</body>
+			<commentOnFailure>汽车最高保额10万元，火车轮船风险最高保额20万元，飞机风险最低保额20万元，最高保额200万元
+			</commentOnFailure>
+		</rule>
+		<rule kind="Eligibility" name="购买份数限制" seqIndex="1" language="GROOVY">
+			<body>
+				<![CDATA[
+					def city = context.getInsured.getCity();
+					def age = context.getInsured.getAge();
+					if(age >= 18){
+						return context.getUnitCount() == 1;
+					}else{
+						if(city.equals("北京") || city.equals("上海") || city.equals("广州") || city.equals("深圳")){
+							return context.getUnitCount() == 2 || context.getUnitCount() == 1;
+						}
+					}
+				]]>
+			</body>
+		</rule>
+	</rules>
+
+	<calculations>
+		<calculation kind="totalInsuredAmount" name="总保额计算"
+			seqIndex="2" language="GROOVY">
+			<body><![CDATA[   
+				context.setSmfProperty("totalInsuredAmount",context.insuredAmount);
+				context.setSmfProperty("insuredAmount",context.getSmfProperty("totalInsuredAmount"));
+				]]></body>
+		</calculation>
+		<calculation kind="inceptionDate" name="保险起期计算" seqIndex="2"
+			language="GROOVY">
+			<body><![CDATA[
+            	Date tomorrow = com.siebre.webapp.util.DateUtil.getTomorrow();
+            	Date tomorrowStart = com.siebre.webapp.util.DateUtil.getDayStart(tomorrow);
+            	context.setSmfProperty("inceptionDate",tomorrowStart);
+            	context.setSmfProperty("benefitDurationMode", com.siebre.policy.enums.BenefitDurationMode.MONTHLY);
+				]]></body>
+		</calculation>
+		<calculation kind="grossPremium" name="总保费计算" seqIndex="2"
+			language="GROOVY">
+			<body><![CDATA[		    
+				context.setSmfProperty("grossPremium",context.premium);
+				]]></body>
+		</calculation>
+	</calculations>
+	<requests>
+		<request kind="Quote" name="试算" description="" seqIndex="0"
+			instanceClassName="PolicyTransaction" preconditionKinds=""
+			precalculationKinds="ClearProduct" calculationKinds="grossPremium,totalInsuredAmount"
+			postconditionKinds="Eligibility">
+			<properties />
+			<constantProperties />
+			<rules />
+		</request>
+		<request kind="New Underwriting" name="新契约投保服务" description=""
+			seqIndex="0" instanceClassName="PolicyTransaction" preconditionKinds=""
+			precalculationKinds="" calculationKinds="grossPremium,totalInsuredAmount,premium"
+			postconditionKinds="Eligibility">
+			<properties />
+			<constantProperties />
+			<rules />
+		</request>
+		<request kind="Policy Inquiry" name="保单查询服务" description=""
+			seqIndex="0" instanceClassName="PolicyTransaction" preconditionKinds=""
+			precalculationKinds="" calculationKinds="" postconditionKinds="">
+			<properties />
+			<constantProperties />
+			<rules />
+		</request>
+	</requests>
+</product>

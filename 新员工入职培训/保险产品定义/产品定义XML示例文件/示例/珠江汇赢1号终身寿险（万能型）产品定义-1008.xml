@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="GBK"?>
+<product kind="Marketable Product" name="珠江汇赢1号终身寿险（万能型）"
+    description="1. 《珠江汇赢1号终身寿险（万能型）条款》作为主险单独销售，不可搭配其他附加险。
+2. 凡出生满18周岁以上、70周岁（含70周岁），身体健康的人，均可作为本合同的被保险人。
+3. 本险种不计算风险保额。
+4. 本合同缴费方式为一次性缴清。
+5. 本险种最低保费1000元，并以1000元逐级递增。 
+6. 投保人默认为支付宝账户持有人，不允许变更投保人操作。
+7. 网络销售不登记客户签名样式，故本产品无客户签名样式登记操作。"
+    seqIndex="0" externalReference="1008" lineOfBusiness="PROPERTY" groupType="PERSONAL" shortName="万能险" instanceClassName="InsurancePolicy">
+    <baseSpec version="0"/>
+   <properties>
+		<property kind="policyNumber" name="保单号" description="" seqIndex="100" dataType="String" beanProperty="true" isHidden="false" required="false" derived="false" defaultValue="" group="Base" allowedValues=""/>
+		<property kind="inceptionDate" name="生效日期" description="" seqIndex="200" dataType="Date" beanProperty="true" isHidden="false" required="false" derived="false"  defaultValue="new java.util.Date()" group="Base" allowedValues=""></property>
+		<property kind="plannedEndDate" name="保单止期" description="" seqIndex="300" dataType="Date" beanProperty="true" isHidden="false" required="false" derived="false"  defaultValue="" group="Base" allowedValues=""></property>
+        <property kind="unitCount" name="保险份数" description="" seqIndex="400" dataType="Integer" beanProperty="true"	isHidden="false" required="true" derived="false" defaultValue="" group="Base" />
+        <property kind="skuUnitCount" name="SKU份数" description="" seqIndex="400" dataType="Integer" beanProperty="true"	isHidden="false" required="true" derived="false" defaultValue="" group="Base" />
+		<property kind="premium" name="基本保费" seqIndex="500" dataType="Decimal" beanProperty="true" isHidden="false" required="false" derived="false"/>
+		<property kind="insuredAmount" name="基本保额" seqIndex="600" dataType="Decimal" beanProperty="true" isHidden="false" required="false" derived="false"/>
+		<property kind="totalInsuredAmount" name="总保额" seqIndex="700" dataType="Decimal" beanProperty="false" isHidden="false" required="false" derived="false"/>
+		<property kind="grossPremium" name="总保费" seqIndex="800" dataType="Decimal" beanProperty="true" isHidden="false" required="false" derived="false" />
+		<property kind="paymentMode" name="缴费方式" seqIndex="900" dataType="PaymentMode" beanProperty="true" required="false" derived="true" defaultValue="'SINGLE'" group="Base" />
+        <property kind="paymentDurationMode" name="缴费期间类型" seqIndex="1000" dataType="PaymentDurationMode" beanProperty="true" required="false" derived="true" defaultValue="'SINGLE'" group="Base" />
+        <property kind="paymentDuration" name="缴费期数" seqIndex="1100" dataType="Integer" beanProperty="true" required="false" derived="true" group="Base" />
+        <property kind="benefitDurationMode" name="保障期间类型" seqIndex="1200" dataType="BenefitDurationMode" beanProperty="true" required="false" derived="true" defaultValue="'LIFE_TIME'" group="Base" />
+        <property kind="benefitDuration" name="保障期数" seqIndex="1300" dataType="Integer" beanProperty="true" required="false" derived="true" group="Base" />    
+		<property kind="appSignedDate" name="投保日期" seqIndex="1400" dataType="Timestamp" beanProperty="true" required="false" derived="false" group="Base" />
+		<property kind="deliveryReceiptDate" name="出单时间" seqIndex="1500" dataType="Timestamp" beanProperty="true" required="false" derived="false" group="Base" />
+		<property kind="issueDate" name="生效日期" seqIndex="1600" dataType="Timestamp" beanProperty="true" required="false" derived="false" group="Base" />
+		<property kind="skuRiskCode" name="SKU代码" description="根据代码来计算单价" seqIndex="500" dataType="String" beanProperty="true" isHidden="false" required="false" derived="false" defaultValue="" group="Base" allowedValues=""/>
+	</properties>
+	<constantProperties>
+		<constantProperty kind="premium" name="基本保费" seqIndex="0" bmfDataType="Decimal" decimalValue="1000" group="">
+			<value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:java.math.BigDecimal">1000</value>
+		</constantProperty>
+		<constantProperty kind="expectedAnnualYieldRate" name="预期年化收益率" seqIndex="0" bmfDataType="Decimal" decimalValue="0.065" group="">
+			<value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:java.math.BigDecimal">0.065</value>
+		</constantProperty>
+		<!-- 
+		<constantProperty kind="insuredAmount" name="基本保额" seqIndex="0" bmfDataType="Decimal" decimalValue="0" group="">
+			<value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:java.math.BigDecimal">0</value>
+		</constantProperty>
+		<constantProperty kind="proportionOfPremium" name="初始个人账户价值按保费比例" seqIndex="0" bmfDataType="Decimal" decimalValue="100" group="">
+			<value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:java.math.BigDecimal">100</value>
+		</constantProperty>
+		<constantProperty kind="minimumAnnualRate" name="个人账户价值最低年化利率" seqIndex="0" bmfDataType="Decimal" decimalValue="2.5" group="">
+			<value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:java.math.BigDecimal">2.5</value>
+		</constantProperty>
+		<constantProperty kind="surrenderChargeRate1" name="第一个保单年度退保费用比例" seqIndex="0" bmfDataType="Decimal" decimalValue="3" group="">
+			<value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:java.math.BigDecimal">3</value>
+		</constantProperty>
+		 -->
+	</constantProperties>
+	<roles>
+        <role kind="Insured" name="被保人" description="" seqIndex="0"
+            minOccurrence="1" maxOccurrence="1" instanceClassName="PolicyPersonRole">
+            <properties>
+				<property kind="applicantRelatedToInsured" name="投被保人关系"
+                    description="" seqIndex="50"
+                    dataType="RelatedToRoleCode" beanProperty="true"
+                    isHidden="false" required="true"
+                    requiredExperession="" derived="false"
+                    defaultValue="SELF" group="Base" />
+				<property kind="fullName" name="被保人姓名" seqIndex="100"
+                    dataType="String" beanProperty="true"
+                    isHidden="false" required="true" derived="false" group="Base" maxLength="20"/>
+                <property kind="gender" name="被保人性别" seqIndex="200"
+                    dataType="Gender" beanProperty="true" 
+                    isHidden="false" required="false" derived="false" group="Base" />
+                <property kind="idType" name="证件类型" description=""
+                    seqIndex="300" dataType="IdType"
+                    beanProperty="true" isHidden="false"
+                    required="false" derived="false"
+                    defaultValue="'SOCIAL_SECURITY_CARD'" group="Base" allowedValues=""/>
+                <property kind="idNumber" name="证件号码" seqIndex="350"
+                    dataType="String" beanProperty="true"
+                    isHidden="false" required="false" derived="false" group="Base" maxLength="20"/>
+                <property kind="birthDate" name="出生日期" seqIndex="360"
+                    dataType="Date" beanProperty="true"
+                    isHidden="false" required="false" derived="false"
+                    defaultValue="" group="Base,Quote" allowedValues="" maxLength="10"/>
+				<property kind="phoneNumber" name="联系电话"
+                    seqIndex="370" dataType="String"
+                    beanProperty="true" isHidden="false"
+                    required="true" derived="false" group="Base" maxLength="20"/>
+                <property kind="postalAddress" name="住址" seqIndex="900"
+                    dataType="String" beanProperty="false"
+                    isHidden="false" required="false" derived="false" group="Base" allowedValues=""/>
+                <property kind="email" name="电子邮件" seqIndex="950"
+                    dataType="String" beanProperty="true"
+                    isHidden="false" required="false" derived="false" group="Base" allowedValues=""/>
+                 <property kind="postalCode" name="邮政编码" seqIndex="1000"
+                    dataType="String" beanProperty="true"
+                    isHidden="false" required="false" derived="false" group="Base" maxLength="20"/>
+            </properties>
+			<calculations>
+    			<calculation kind="birthDate" name="出生日期计算" seqIndex="2" language="GROOVY"  >
+           			 <body><![CDATA[
+            		def birth = com.siebre.util.IdNumberUtils.getBirthByIdCard(context.getSmfProperty("idNumber"));
+            		def df = new java.text.SimpleDateFormat("yyyyMMdd");
+            		def birthDate = df.parse(birth);
+					context.setSmfProperty("birthDate",birthDate);
+					]]>
+					</body>
+       			</calculation>
+       			<calculation kind="Gender" name="性别计算" seqIndex="2" language="GROOVY"  >
+           			<body><![CDATA[
+            		def gender = com.siebre.util.IdNumberUtils.getGenderByIdCard(context.getSmfProperty("idNumber"));
+            		
+            		if ("M" == gender)
+						context.setSmfProperty("gender", com.siebre.party.enums.Gender.MALE);
+					else if ("F" == gender)
+						context.setSmfProperty("gender", com.siebre.party.enums.Gender.FEMALE);
+					else
+						context.setSmfProperty("gender", com.siebre.party.enums.Gender.UNKNOWN);
+					]]>
+					</body>
+       			</calculation>
+       		</calculations>
+        </role>
+        <role kind="Applicant" name="投保人" description="" seqIndex="0"
+            minOccurrence="1" maxOccurrence="1" instanceClassName="PolicyPersonRole">
+            <properties>
+				<property kind="fullName" name="姓名" seqIndex="100"
+                    dataType="String" beanProperty="true"
+                    isHidden="false" required="true" derived="false" group="Base" maxLength="120"/>
+                <property kind="gender" name="性别" seqIndex="0"
+                    dataType="Gender" beanProperty="true" 
+                    isHidden="false" required="false" derived="false" group="Base" />
+                <property kind="idType" name="证件类型" description=""
+                    seqIndex="300" dataType="IdType"
+                    beanProperty="true" isHidden="false"
+                    required="false" derived="false"
+                    defaultValue="SOCIAL_SECURITY_CARD" group="Base" allowedValues="SOCIAL_SECURITY_CARD"/>
+                <property kind="idNumber" name="证件号码" seqIndex="350"
+                    dataType="String" beanProperty="true"
+                    isHidden="false" required="false" derived="false" group="Base" maxLength="20"/>     
+                <property kind="birthDate" name="出生日期" seqIndex="360"
+                    dataType="Date" beanProperty="true"
+                    isHidden="false" required="false" derived="false"
+                    defaultValue="" group="Base,Quote" allowedValues="" maxLength="10">
+				</property>
+                <property kind="phoneNumber" name="联系电话"
+                    seqIndex="370" dataType="String"
+                    beanProperty="true" isHidden="false"
+                    required="true" derived="false" group="Base" maxLength="20"/>
+                <property kind="postalAddress" name="住址" seqIndex="900"
+                    dataType="String" beanProperty="false"
+                    isHidden="false" required="false" derived="false" group="Base" allowedValues=""/>
+                <property kind="email" name="电子邮件" seqIndex="950"
+                    dataType="String" beanProperty="true"
+                    isHidden="false" required="false" derived="false" group="Base" allowedValues=""/>
+                <property kind="postalCode" name="邮政编码" seqIndex="380"
+                    dataType="String" beanProperty="true"
+                    isHidden="false" required="false" derived="false" group="Base" maxLength="20"/>
+            </properties>
+			<calculations>
+    			<calculation kind="birthDate" name="出生日期计算" seqIndex="2" language="GROOVY"  >
+           			 <body><![CDATA[
+            		def birth = com.siebre.util.IdNumberUtils.getBirthByIdCard(context.getSmfProperty("idNumber"));
+            		def df = new java.text.SimpleDateFormat("yyyyMMdd");
+            		def birthDate = df.parse(birth);
+					context.setSmfProperty("birthDate",birthDate);
+					]]>
+					</body>
+       			</calculation>
+       			<calculation kind="Gender" name="性别计算" seqIndex="2" language="GROOVY"  >
+           			 <body><![CDATA[
+            		def gender = com.siebre.util.IdNumberUtils.getGenderByIdCard(context.getSmfProperty("idNumber"));
+            		
+            		if ("M" == gender)
+						context.setSmfProperty("gender", com.siebre.party.enums.Gender.MALE);
+					else if ("F" == gender)
+						context.setSmfProperty("gender", com.siebre.party.enums.Gender.FEMALE);
+					else
+						context.setSmfProperty("gender", com.siebre.party.enums.Gender.UNKNOWN);
+					]]>
+					</body>
+       			</calculation>
+       		</calculations>
+            <rules>	
+                <rule kind="Eligibility" name="投保人的年龄限制" seqIndex="0" language="GROOVY">
+                    <body><![CDATA[
+                    return (context.getAge() >= 18) && (context.getAge() <= 70);
+                    ]]></body>
+                    <commentOnFailure>投保人年龄必须在18周岁-70周岁之间！</commentOnFailure>
+                </rule>
+            </rules>
+        </role>
+		<role kind="Beneficiary" name="受益人" seqIndex="0"
+            minOccurrence="0" maxOccurrence="1" instanceClassName="PolicyPersonRole">
+            <properties>
+                <property kind="beneficiaryRelatedToInsured" name="受益人与投保人关系"
+                    description="" seqIndex="0"
+                    dataType="RelatedToRoleCode" beanProperty="false"
+                    isHidden="true" required="true" derived="false"
+                    defaultValue="LegalInherit" group="" allowedValues="Parent,SELF"/>
+                <property kind="fullName" name="受益人姓名" seqIndex="100"
+                    dataType="String" beanProperty="true"
+                    isHidden="true" required="false" derived="false" group="Base"/>
+                <property kind="gender" name="受益人性别" seqIndex="200"
+                    dataType="Gender" beanProperty="true"
+                    isHidden="true" required="false" derived="false" group="Base"/>
+                <property kind="idType" name="受益人证件类型" seqIndex="300"
+                    dataType="IdType" beanProperty="true"
+                    isHidden="true" required="false" derived="false" group="Base"/>
+                <property kind="idNumber" name="受益人证件号码" seqIndex="350"
+                    dataType="String" beanProperty="true"
+                    isHidden="true" required="false" derived="false" group="Base"/>
+                <property kind="phoneNumber" name="受益人联系电话"
+                    seqIndex="400" dataType="String"
+                    beanProperty="false" isHidden="true"
+                    required="false" derived="false" group="Base"/>
+                <property kind="postalAddress" name="受益人住址" seqIndex="900"
+                    dataType="String" beanProperty="false"
+                    isHidden="false" required="false" derived="false" group="Base" allowedValues=""/>
+                <property kind="email" name="受益人电子邮件" seqIndex="900"
+                    dataType="String" beanProperty="true"
+                    isHidden="false" required="false" derived="false" group="Base" allowedValues=""/>
+                 <property kind="beneficiaryType" name="受益人类型/顺位"
+                    seqIndex="450" dataType="BeneficiaryType"
+                    beanProperty="true" isHidden="true"
+                    required="true" derived="true" defaultValue="BeneficiaryLegal" allowedValues="BeneficiaryLegal" group="Base"/>
+                <property kind="benefitPercent" name="受益比例"
+                    seqIndex="500" dataType="Integer"
+                    beanProperty="false" isHidden="true"
+                    required="false" derived="false"/>
+                    <property kind="postalCode" name="邮政编码" seqIndex="380"
+                    dataType="String" beanProperty="false"
+                    isHidden="false" required="false" derived="false" group="Base" maxLength="20"/>
+            </properties>
+            <rules>	
+            	<!-- 
+                <rule kind="Eligibility" name="受益人类型限制" seqIndex="0" language="GROOVY">
+                    <body><![CDATA[context.getBeneficiaryType() == com.siebre.policy.enums.BeneficiaryType.BeneficiaryLegal]]></body>
+                    <commentOnFailure>受益人类型必须为法定！</commentOnFailure>
+                </rule>
+                 -->
+            </rules>
+        </role>
+		<role kind="SellingChannel" name="销售渠道" description="" seqIndex="0" minOccurrence="1" maxOccurrence="1">
+			<Properties>
+				<Property kind="intermediaryCode" name="渠道来源（编号）" value="01" />
+				<Property kind="AgentCode" name="代理人代码" value="01001" />
+			</Properties>	
+		</role>
+	</roles>
+    <rules>
+    	<!-- 
+		<rule kind="Eligibility" name="投被保人关系限制" seqIndex="0" language="GROOVY">
+				<body><![CDATA[
+					def insured  = context.getRoleOfKind("Insured");
+					return insured.getSmfProperty("applicantRelatedToInsured") == com.siebre.policy.enums.RelatedToRoleCode.SELF
+					]]>
+				</body>
+				
+				<commentOnFailure>投被保险人必须是同一人 </commentOnFailure>
+		</rule>	
+		 
+		<rule kind="Eligibility" name="被保人年龄限制" seqIndex="0" language="GROOVY">
+				<body><![CDATA[
+					def insured  = context.getRoleOfKind("Insured");
+					if(insured.getAge() < 18){
+						return false;
+					} else if (insured.getAge() > 70) {
+						return false;
+					}
+					]]>
+					
+				</body>
+				<commentOnFailure>被保人年龄限制18至70周岁</commentOnFailure>
+		</rule>	
+		<rule kind="Eligibility" name="缴费方式期间类型校验" seqIndex="2" language="GROOVY">
+                    <body><![CDATA[
+                       	 return context.getPaymentMode() == com.siebre.policy.enums.PaymentMode.SINGLE;
+                    ]]></body>
+                    <commentOnFailure>本合同缴费方式为一次性缴清</commentOnFailure>
+        </rule>	
+		-->
+		<rule kind="policyStatusCheck" name="保单状态校验" seqIndex="2" language="GROOVY">
+                    <body><![CDATA[
+                       	 return context.status == com.siebre.policy.enums.PolicyStatus.IN_FORCE;
+                    ]]></body>
+                    <commentOnFailure>保单状态必须为有效</commentOnFailure>
+        </rule>		
+		<rule kind="Eligibility" name="投保份数校验" seqIndex="2" language="GROOVY">
+                    <body><![CDATA[
+                       	 return context.getUnitCount()>0 && context.getUnitCount()<=2000;
+                    ]]></body>
+                    <commentOnFailure>投保份数不符合规定,最多购买2000份，最少1份</commentOnFailure>
+        </rule>	
+        <rule kind="Eligibility" name="SKU代码校验" seqIndex="3" language="GROOVY">
+                    <body><![CDATA[
+                       	String skuRiskCode = context.getSmfProperty("skuRiskCode"); 
+                       	if(skuRiskCode == null || "".equals(skuRiskCode)) {
+                       		return false;
+                       	}else{
+                       		return true;
+                       	}
+                    ]]></body>
+                    <commentOnFailure>SKU代码不能为空</commentOnFailure>
+        </rule>	
+    </rules>
+    <calculations>
+		<calculation kind="grossPremium" name="总保费计算" seqIndex="2" language="GROOVY"  >
+            <body><![CDATA[
+            	def map = ['1008_0823': '1000',
+            			   '1008_1028': '10000',
+            			   '1008_1000': '1000',
+            			   '1008_2000': '2000',
+            			   '1008_3000': '3000',
+            			   '1008_5000': '5000',
+            			   '1008_10000': '10000',
+            			   '1008_15000': '15000',
+            			   '1008_20000': '20000',
+            			   '1008_25000': '25000',
+            			   '1008_30000': '30000',
+            			   '1008_50000': '50000'];
+            	String skuRiskCode = context.getSmfProperty("skuRiskCode");
+            	java.math.BigDecimal premium = new java.math.BigDecimal("1000.00");
+            	java.math.BigDecimal premiumPerCount = new java.math.BigDecimal(map.get(skuRiskCode));
+            	context.setSmfProperty("premium", premium);
+            	def grossPremium = premiumPerCount * context.getSmfProperty("skuUnitCount");
+				context.setSmfProperty("grossPremium",grossPremium);
+				context.setSmfProperty("unitCount", context.getSmfProperty("skuUnitCount") * premiumPerCount.divide(premium).intValue());
+				]]></body>
+        </calculation>
+        <calculation kind="unitCount" name="份数计算" seqIndex="2" language="GROOVY"  >
+            <body><![CDATA[
+            		java.math.BigDecimal premium = new java.math.BigDecimal("1000.00");
+                context.setSmfProperty("unitCount", context.getSmfProperty("grossPremium").divide(premium).intValue());
+                ]]></body>
+        </calculation>
+        <!-- 
+		<calculation kind="totalInsuredAmount" name="总保额计算" seqIndex="2" language="GROOVY"  >
+            <body><![CDATA[
+            	context.setSmfProperty("insuredAmount",context.getConstProperty("insuredAmount"));
+				]]></body>
+        </calculation>
+         -->
+         <calculation kind="plannedEndDate" name="保险止期计算" seqIndex="2" language="GROOVY"  >
+            <body><![CDATA[
+            	def map = ['PRLIFE-1008-001': 'Y1',
+            						'PRLIFE-1008-002': 'Y1',
+            						'PRLIFE-1008-003': 'Y1',
+            						'PRLIFE-1008-004': 'Y1',
+            						'PRLIFE-1008-005': 'Y1',
+            						'PRLIFE-1008-006': 'Y1',
+            						'PRLIFE-1008-007': 'Y1',
+            						'PRLIFE-1008-008': 'Y1',
+            						'PRLIFE-1008-009': 'Y1',
+            						'PRLIFE-1008-010': 'Y1',
+									'PRLIFE-1008-011': 'Y1',
+									'PRLIFE-1008-012': 'Y1'];
+            	
+            	String skuCode = context.skuRiskCode;
+            	String exp = map.get(skuCode);
+            	if (exp == null)
+            		exp = "Y1"; 
+            	System.out.println("exp :" + exp);
+            	
+            	if (exp.startsWith("Y")) {
+            		String prdLiteral = exp.replaceAll("Y", "");
+            		context.plannedEndDate = com.siebre.webapp.util.DateUtil.addYear(context.inceptionDate, Integer.valueOf(prdLiteral));
+            	} else if (exp.startsWith("D")) {
+            		String prdLiteral = exp.replaceAll("D", "");
+            		context.plannedEndDate = com.siebre.webapp.util.DateUtil.addDay(context.inceptionDate, Integer.valueOf(prdLiteral));
+            	}
+			]]></body>
+        </calculation>
+        <calculation kind="inceptionDate" name="保险起期计算" seqIndex="2" language="GROOVY"  >
+            <body><![CDATA[
+            	Date inceptionDate = new Date();
+            	
+            	if (context.getPayupDate() != null) {
+            		inceptionDate = com.siebre.webapp.util.DateUtil.addDay(context.getPayupDate(), 1);
+            	} else if (context.getAppSignedDate() != null) { 
+            		inceptionDate = com.siebre.webapp.util.DateUtil.addDay(context.getAppSignedDate(), 1);
+            	};
+            	
+            	inceptionDate = com.siebre.webapp.util.DateUtil.getDayStart(inceptionDate);
+            	
+            	context.setSmfProperty("inceptionDate",inceptionDate);
+            	context.setSmfProperty("benefitDurationMode", com.siebre.policy.enums.BenefitDurationMode.LIFE_TIME);
+				]]></body>
+        </calculation>
+	</calculations>
+	<requests>
+        <request kind="Quote" name="淘宝出单请求" description="" seqIndex="0"
+            instanceClassName="PolicyTransaction"
+            preconditionKinds="" precalculationKinds="ClearProduct"
+            calculationKinds="grossPremium,birthDate,totalInsuredAmount,inceptionDate,Gender" postconditionKinds="Eligibility">
+		<behaviorBody></behaviorBody>
+        </request>
+        <request kind="New" name="支付宝出单请求" description="" seqIndex="0"
+            instanceClassName="PolicyTransaction"
+            preconditionKinds="" precalculationKinds=""
+            calculationKinds="birthDate,inceptionDate,plannedEndDate,Gender,unitCount" postconditionKinds="">
+            <behaviorBody></behaviorBody>
+        </request>
+        <request kind="Policy Inquiry" name="保单查询服务" description="" seqIndex="0"
+            instanceClassName="PolicyTransaction"
+            preconditionKinds="" precalculationKinds=""
+            calculationKinds="" postconditionKinds="">
+            <behaviorBody></behaviorBody>
+        </request>
+        <request kind="Policy Value Inquiry" name="保单价值查询服务" description="" seqIndex="0"
+            instanceClassName="PolicyTransaction"
+            preconditionKinds="" precalculationKinds=""
+            calculationKinds="" postconditionKinds="">
+            <behaviorBody></behaviorBody>
+        </request>
+        <request kind="Surrender Charge Inquiry" name="退保费用查询服务" description="" seqIndex="0"
+            instanceClassName="PolicyTransaction"
+            preconditionKinds="" precalculationKinds=""
+            calculationKinds="" postconditionKinds="">
+            <behaviorBody></behaviorBody>
+        </request>
+        <request kind="Surrender" name="退保服务" description="" seqIndex="0"
+            instanceClassName="PolicyTransaction"
+            preconditionKinds="" precalculationKinds=""
+            calculationKinds="" postconditionKinds="">
+            <behaviorBody></behaviorBody>
+        </request>
+        <request kind="Cancel" name="当日撤单服务" description="" seqIndex="0"
+            instanceClassName="PolicyTransaction"
+            preconditionKinds="policyStatusCheck,inceptionDateCheck" precalculationKinds=""
+            calculationKinds="surrenderAmount" postconditionKinds="">
+            <behaviorBody></behaviorBody>
+        </request>
+        <request kind="Hesitate To Surrender" name="犹豫期退保服务" description="" seqIndex="0"
+            instanceClassName="PolicyTransaction"
+            preconditionKinds="" precalculationKinds=""
+            calculationKinds="" postconditionKinds="">
+            <behaviorBody></behaviorBody>
+        </request>
+        <request kind="Part Of Payout" name="部分领取服务" description="" seqIndex="0"
+            instanceClassName="PolicyTransaction"
+            preconditionKinds="policyStatusCheck,inceptionDateCheck" precalculationKinds=""
+            calculationKinds="surrenderAmount,fee" postconditionKinds="">
+            <behaviorBody></behaviorBody>
+        </request>
+        <request kind="Surrender Transfer" name="退保到帐服务" description="" seqIndex="0"
+            instanceClassName="PolicyTransaction"
+            preconditionKinds="" precalculationKinds=""
+            calculationKinds="" postconditionKinds="">
+            <behaviorBody></behaviorBody>
+        </request>
+    </requests>
+	<components/>
+	</product>
+
+

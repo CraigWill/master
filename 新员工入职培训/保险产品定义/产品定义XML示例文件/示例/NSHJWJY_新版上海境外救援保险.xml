@@ -1,0 +1,856 @@
+<?xml version="1.0" encoding="GBK"?>
+<product kind="Marketable Product" name="新版上海境外救援保险" seqIndex="0" externalReference="NSHJWJY" instanceClassName="InsurancePolicy" shortName="新版上海境外救援保险【批量出单】" groupType="PERSONAL" sellChannelType="RemoteSell">
+	<description>人保寿险境外意外伤害保险（新标准版）-意外身故</description>
+	<baseSpec version="0"/>
+	<properties>
+		<property kind="policySerialNumber" name="保单印刷号" seqIndex="100" dataType="String" beanProperty="true" isHidden="false" required="false" derived="false" defaultValue="" group="Base" allowedValues=""/>
+		<property kind="inceptionDate" name="生效日期" seqIndex="150" dataType="Date" beanProperty="true" isHidden="false" required="true" derived="false" defaultValue="new java.util.Date()" group="Base"/>
+		<property kind="benefitPeriodType" name="保障类型" seqIndex="200" dataType="BenefitPeriodType" beanProperty="true" isHidden="false" required="true" derived="true" group="Base" allowedValues="DAILY" defaultValue="DAILY"/>
+		<property kind="benefitPeriod" name="保障类型年期" seqIndex="300" dataType="Integer" beanProperty="true" isHidden="false" required="true" derived="false"  group="Base"/>
+		<property kind="premium" name="境外意外伤害保费" seqIndex="930" dataType="Decimal" beanProperty="true" isHidden="true" required="false" derived="false" group="Base"/>
+		<property kind="insuredAmount" name="境外意外伤害保额" seqIndex="940" dataType="Decimal" beanProperty="true" isHidden="true" required="false" derived="false" group="Base"/>
+		<property kind="beneficiaryMode" name="受益人类型" seqIndex="970" dataType="BeneficiaryMode" beanProperty="true" isHidden="true" required="false" defaultValue="BY_LAW" derived="false"/>
+		<property kind="unitCount" seqIndex="980" name="份数" dataType="Integer" beanProperty="true" isHidden="true" required="false" defaultValue="1" derived="false"/>
+		<property kind="grossPremiumUP" name="总保费大写" seqIndex="998" dataType="String" beanProperty="false" isHidden="false" required="false" derived="false"/>
+		<property kind="plan" name="方案选择" seqIndex="998" dataType="String" beanProperty="false" isHidden="false" required="false" derived="false"/>
+		<property kind="isSelect" name="附加方案选择" seqIndex="998" dataType="String" beanProperty="false" isHidden="false" required="false" derived="false"/>
+		<property kind="grossPremiumFJ" name="附加险总保费" seqIndex="700" dataType="Decimal" beanProperty="false" isHidden="false" required="false" derived="true"/>
+		<property kind="grossPremiumZX" name="主险总保费" seqIndex="700" dataType="Decimal" beanProperty="false" isHidden="true" required="false" derived="true"/>
+		<property kind="grossPremium" name="总保费" seqIndex="700" dataType="Decimal" beanProperty="true" isHidden="true" required="false" derived="true"/>
+		<property kind="specialDescription" name="特别约定" seqIndex="1000" dataType="String" beanProperty="true" isHidden="false" required="false" derived="true" defaultValue=""/>
+		<property kind="remoteSell" name="远程出单" seqIndex="1000" dataType="String" beanProperty="false" isHidden="false" required="false" derived="true" defaultValue=""/>
+		<property kind="inceptionDateUA" name="起始日期" seqIndex="998" dataType="Date" beanProperty="false" isHidden="false" required="false" derived="false"/>
+		<property kind="plannedEndDateUA" name="结束日期" seqIndex="998" dataType="Date" beanProperty="false" isHidden="false" required="false" derived="false"/>
+	</properties>
+	<constantProperties>
+		<constantProperty kind="includeJSP" name="嵌入页面名称" seqIndex="128" dataType="String" beanProperty="false" isHidden="false" required="false" derived="false" stringValue="forNSHJWJY"/>
+		<constantProperty kind="coreProductCode" name="送核心代码" seqIndex="103" dataType="String" beanProperty="false" isHidden="false" required="true" derived="false" stringValue="63563"/>
+		<constantProperty kind="isVirtual" name="是否虚拟主险" seqIndex="105" dataType="Boolean" beanProperty="false" isHidden="false" required="false" derived="false" booleanValue="false"/>
+		<constantProperty kind="isAutoAmount" name="动态保额标识" seqIndex="104" dataType="Boolean" beanProperty="false" isHidden="false" required="false" derived="false" booleanValue="true"/>
+		<constantProperty kind="activeTime" name="激活次数" seqIndex="111" dataType="Decimal" beanProperty="false" isHidden="false" required="true" derived="false" intValue="1"/>
+		<constantProperty kind="insuranceTemplates" name="险种模版" seqIndex="115" dataType="String" beanProperty="false" isHidden="false" required="true" derived="false" stringValue="NSHJWJY"/>
+		<constantProperty kind="EPolicyTemplate" name="电子保单模板"  seqIndex="125" dataType="String" beanProperty="false" isHidden="false" required="false" derived="false" stringValue="epageSHJWJY"/>
+		<constantProperty kind="isSendCoreSpecialDescription" name="特别约定是否传核心" seqIndex="90" dataType="Boolean" beanProperty="false" isHidden="false" required="false" derived="true" booleanValue="false"/>
+		<constantProperty kind="cancelPolicy" name="生效前允许撤单标示" seqIndex="127" dataType="Boolean" beanProperty="false" isHidden="false" required="false" derived="false" booleanValue="true"/>
+		<constantProperty kind="isAppletPrint" name="打印标识" seqIndex="104" dataType="Boolean" 
+		         beanProperty="false" isHidden="false" required="false" derived="false" booleanValue="true"/>
+	</constantProperties>
+	<roles>
+		<role kind="Applicant" name="投保人" seqIndex="0" minOccurrence="1" maxOccurrence="-1" instanceClassName="PartyRoleInPolicy">
+			<properties>
+				<property kind="fullName" name="投保人姓名" seqIndex="100" dataType="String" beanProperty="true" isHidden="false" required="true" derived="false" group="Base"/>
+				<property kind="idType" name="投保人证件类型" seqIndex="300" dataType="IdType" beanProperty="true" isHidden="false" required="true" derived="false" group="Base"/>
+				<property kind="idNumber" name="投保人证件号码" seqIndex="350" dataType="String" beanProperty="true" isHidden="false" required="true" derived="false" group="Base"/>
+				<property kind="gender" name="投保人性别" seqIndex="200" dataType="Gender" beanProperty="true" isHidden="false" required="true" derived="false" group="Base" defaultValue="M"/>
+				<property kind="birthDate" name="投保人出生日期" seqIndex="360" dataType="Date" beanProperty="true" isHidden="false" required="true" derived="false" defaultValue="" group="Base" allowedValues=""/>
+				<property kind="phoneNumber" name="投保人固定电话" seqIndex="370" dataType="String" beanProperty="true" isHidden="false" required="false" derived="false" group="Base"/>
+				<property kind="addressLines" name="投保人邮寄地址" seqIndex="600" dataType="String" beanProperty="true" isHidden="false" required="false" derived="false" group="Base"/>
+				<property kind="relatedToRoleCode" name="与被保人关系" dataType="RelatedToRoleCode" beanProperty="true" isHidden="true" required="true" derived="false" group="Base"/>
+			</properties>
+			<rules>
+				<rule kind="Eligibility" name="投保人的年龄限制" seqIndex="0" language="GROOVY">
+					<body><![CDATA[ context.age >= 18 ]]>
+					</body>
+					<commentOnFailure>投保人的年龄必须大于等于18周岁</commentOnFailure>
+				</rule>
+			</rules>
+		</role>
+		
+		<role kind="Insured" name="被保人" seqIndex="0" minOccurrence="1" maxOccurrence="1" instanceClassName="PartyRoleInPolicy">
+			<properties>
+				<property kind="fullName" name="被保人姓名" seqIndex="100" dataType="String" beanProperty="true" isHidden="false" required="true" derived="false" group="Base" />
+				<property kind="gender" name="被保人性别" seqIndex="200" dataType="Gender" beanProperty="true" isHidden="false" required="true" derived="false" group="Base" defaultValue="M"/>
+				<property kind="idType" name="被保人证件类型" seqIndex="300" dataType="IdType" beanProperty="true" isHidden="false" required="true" derived="false" group="Base" defaultValue="SHENFENG_CARD"/>
+				<property kind="idNumber" name="被保人证件号码" seqIndex="350" dataType="String" beanProperty="true" isHidden="false" required="true" derived="false" group="Base"/>
+				<property kind="birthDate" name="被保人出生日期" seqIndex="360" dataType="Date" beanProperty="true" isHidden="false" required="true" derived="false" defaultValue="" group="Base" allowedValues=""/>
+				<property kind="phoneNumber" name="被保人固定电话" seqIndex="370" dataType="String" beanProperty="true" isHidden="false" required="false" derived="false" group="Base"/>
+				<property kind="addressLines" name="被保人邮寄地址" seqIndex="600" dataType="String" beanProperty="true" isHidden="false" required="false" derived="false" group="Base"/>
+				<property kind="postalCode" name="被保人邮政编码" seqIndex="700" dataType="String" beanProperty="true" isHidden="false" required="false" derived="false" group="Base"/>
+				<property kind="relatedToRoleCode" name="与被保人关系" dataType="RelatedToRoleCode" beanProperty="true" isHidden="true" required="true" derived="false" group="Base"/>
+			</properties>
+			<rules>
+				<rule kind="Eligibility" name="被保人的年龄限制" seqIndex="0" language="GROOVY">
+					<body><![CDATA[context.ageInDays >= 60  && context.age <=80  ]]>
+					</body>
+					<commentOnFailure>被保人的年龄必须大于等于60天，小于等于80周岁</commentOnFailure>
+				</rule>
+			</rules>
+		</role>
+		
+		<role kind="Beneficiary" name="受益人" seqIndex="0" minOccurrence="0" instanceClassName="PartyRoleInPolicy">
+			<properties>
+				<property kind="fullName" name="受益人姓名" seqIndex="100" dataType="String" beanProperty="true" isHidden="false" required="false" derived="false" group="Base"/>
+				<property kind="idType" name="受益人证件类型" seqIndex="300" dataType="IdType" beanProperty="true" isHidden="false" required="false" derived="false" group="Base"/>
+				<property kind="idNumber" name="受益人证件号码" seqIndex="350" dataType="String" beanProperty="true" isHidden="false" required="false" derived="false" group="Base"/>
+				<property kind="relatedToRoleCode" name="与被保人关系" seqIndex="450" dataType="RelatedToRoleCode" beanProperty="true" isHidden="true" required="false" derived="false" group="Base"/>
+			</properties>
+		</role>
+		
+	</roles>
+	<rules>
+		<rule kind="Eligibility" name="保障期限限制" seqIndex="0" language="GROOVY">
+			<body><![CDATA[return context.benefitPeriod >= 1 && context.benefitPeriod <=365 && com.siebre.policy.enums.BenefitPeriodType.DAILY.equals(context.benefitPeriodType);]]>
+			</body>
+			<commentOnFailure>保障期限为1~365天</commentOnFailure>
+		</rule>
+		
+		<rule kind="Eligibility" name="保单生效日" seqIndex="1" language="GROOVY">
+			<body><![CDATA[
+							Calendar terminalDate = new GregorianCalendar(); 
+							Calendar terminalDate2 = new GregorianCalendar(); 
+							terminalDate.setTime(new Date()); 
+							terminalDate.add(Calendar.MONTH, 12); 
+							return context.inceptionDate.after(terminalDate2.getTime()) && context.inceptionDate.before(terminalDate.getTime());
+			]]>
+			</body>
+			<commentOnFailure>生效日期必须在投保当日的下一天到顺延12个月内</commentOnFailure>
+		</rule>
+		<rule kind="Eligibility" name="投保次数限制" seqIndex="0" language="GROOVY">
+			<body><![CDATA[
+				return applicationContext.getBean("riskManager").validateActiveTime(context);
+			]]>
+			</body>
+			<commentOnFailure>同一被保人只能投保一次</commentOnFailure>
+		</rule>
+	</rules>
+	<requests>
+		<request kind="New" name="投保" seqIndex="0" instanceClassName="FinancialServicesRequest" preconditionKinds="Eligibility" postconditionKinds="CompEligibility" CalculationKinds="SetPreInsComponent"/>
+	</requests>
+	<calculations>
+		<calculation kind="SetPreInsComponent" name="附加险保费计算" seqIndex="2" language="GROOVY">
+			<body>
+				<![CDATA[	import java.math.BigDecimal; 
+				
+							def remoteSells = context.getSmfProperty("remoteSell");
+							def isSelect = context.getSmfProperty("isSelect");
+							if("true".equals(isSelect) && "remoteSell".equals(remoteSells)){
+									context.getRiderOfSpec('61925').insuredAmount = 8000;
+									context.getRiderOfSpec('61948').insuredAmount = 4000;
+									if ( context.benefitPeriod >= 1 && context.benefitPeriod <= 5 ){
+									context.getRiderOfSpec('61925').premium = 78;
+									context.getRiderOfSpec('61948').premium = 1;
+									context.setSmfProperty("grossPremiumFJ",new BigDecimal(79));
+								} else if ( context.benefitPeriod >= 6 && context.benefitPeriod <= 7 ){
+									context.getRiderOfSpec('61925').premium = 107;
+									context.getRiderOfSpec('61948').premium = 1;
+									context.setSmfProperty("grossPremiumFJ",new BigDecimal(108));
+								} else if ( context.benefitPeriod >= 8 && context.benefitPeriod <= 10 ){
+									context.getRiderOfSpec('61925').premium = 169;
+									context.getRiderOfSpec('61948').premium = 1;
+									context.setSmfProperty("grossPremiumFJ",new BigDecimal(170));
+								} else if ( context.benefitPeriod >= 11 && context.benefitPeriod <= 14 ){
+									context.getRiderOfSpec('61925').premium = 194;
+									context.getRiderOfSpec('61948').premium = 1;
+									context.setSmfProperty("grossPremiumFJ",new BigDecimal(195));
+								} else if ( context.benefitPeriod >= 15 && context.benefitPeriod <= 21 ){
+									context.getRiderOfSpec('61925').premium = 209;
+									context.getRiderOfSpec('61948').premium = 1;
+									context.setSmfProperty("grossPremiumFJ",new BigDecimal(210));
+								} else if ( context.benefitPeriod >= 22 && context.benefitPeriod <= 30 ){
+									context.getRiderOfSpec('61925').premium = 279;
+									context.getRiderOfSpec('61948').premium = 1;
+									context.setSmfProperty("grossPremiumFJ",new BigDecimal(280));
+								} else if ( context.benefitPeriod >= 31 && context.benefitPeriod <= 45 ){
+									context.getRiderOfSpec('61925').premium = 321;
+									context.getRiderOfSpec('61948').premium = 1;
+									context.setSmfProperty("grossPremiumFJ",new BigDecimal(322)); 
+								} else if ( context.benefitPeriod >= 46 && context.benefitPeriod <= 60 ){
+									context.getRiderOfSpec('61925').premium = 368;
+									context.getRiderOfSpec('61948').premium = 1;
+									context.setSmfProperty("grossPremiumFJ",new BigDecimal(369)); 
+								} else if ( context.benefitPeriod >= 61 && context.benefitPeriod <= 75 ){
+									context.getRiderOfSpec('61925').premium = 449;
+									context.getRiderOfSpec('61948').premium = 1;
+									context.setSmfProperty("grossPremiumFJ",new BigDecimal(450));
+								} else if ( context.benefitPeriod >= 76 && context.benefitPeriod <= 90 ){
+									context.getRiderOfSpec('61925').premium = 519;
+									context.getRiderOfSpec('61948').premium = 1;
+									context.setSmfProperty("grossPremiumFJ",new BigDecimal(520)); 
+								} else if ( context.benefitPeriod >= 91 && context.benefitPeriod <= 180 ){
+									context.getRiderOfSpec('61925').premium = 607;
+									context.getRiderOfSpec('61948').premium = 1;
+									context.setSmfProperty("grossPremiumFJ",new BigDecimal(608)); 
+								} else if ( context.benefitPeriod > 180 ){
+									context.getRiderOfSpec('61925').premium = 749;
+									context.getRiderOfSpec('61948').premium = 1;
+									context.setSmfProperty("grossPremiumFJ",new BigDecimal(750)); 
+								}
+							} else if("remoteSell".equals(remoteSells)){
+									context.getRiderOfSpec('61925').insuredAmount = 0;
+									context.getRiderOfSpec('61948').insuredAmount = 0;
+									context.getRiderOfSpec('61925').premium = 0;
+									context.getRiderOfSpec('61948').premium = 0;
+									context.setSmfProperty("grossPremiumFJ",BigDecimal.ZERO);
+							}
+							]]>
+			</body>
+		</calculation>
+		<calculation kind="SetPreInsComponent" name="总保费计算" seqIndex="3" language="GROOVY">
+			<body>
+				<![CDATA[	
+							 def remoteSell = context.getSmfProperty("remoteSell");
+							  if ("remoteSell".equals(remoteSell) ) {
+								def grossPremiumZX = context.getSmfProperty("grossPremiumZX");
+								def grossPremiumFJ = context.getSmfProperty("grossPremiumFJ");
+							
+								context.grossPremium = 0;
+								context.grossPremium += grossPremiumZX;
+								context.grossPremium += grossPremiumFJ;
+							}
+								
+						]]>
+			</body>
+		</calculation>
+		
+		<calculation kind="SetPreInsComponent" name="总保费大写" seqIndex="4" language="GROOVY">
+			<body>
+				<![CDATA[	
+							import com.siebre.policy.action.MoneyUtil;
+							 def remoteSell = context.getSmfProperty("remoteSell");
+							 if ("remoteSell".equals(remoteSell) ) {
+							context.setSmfProperty("grossPremiumUP",MoneyUtil.toChinese(context.grossPremium.toString())+"元整");
+							}
+						]]>
+			</body>
+		</calculation>
+		
+		<calculation kind="SetPreInsComponent" name="年龄规则計算" seqIndex="5" language="GROOVY">
+			<body>
+				<![CDATA[
+					if (context.getRoleOfKind('Insured').age < 18 && context.insuredAmount > 100000) {
+						context.insuredAmount = 100000;
+						context.getRiderOfSpec('63564').insuredAmount = 100000;
+					} 
+				]]>
+			</body>
+		</calculation>
+		
+		<calculation kind="SetPreInsComponent" name="年龄规则計算" seqIndex="6" language="GROOVY">
+			<body>
+				<![CDATA[
+					if (context.getRoleOfKind('Insured').age > 65 && context.insuredAmount > 100000) {
+						context.insuredAmount = 100000;
+						context.getRiderOfSpec('63564').insuredAmount = 100000;
+					} 
+				]]>
+			</body>
+		</calculation>
+		
+		<calculation kind="SetPreInsComponent" name="方案計算" seqIndex="1" language="GROOVY">
+			<body>
+				<![CDATA[
+						 import util.IdNumberValidator;
+						 import java.math.BigDecimal; 
+						 
+						 def plan = context.getSmfProperty("plan");
+						 def remoteSell = context.getSmfProperty("remoteSell");
+						 if ("A".equals(plan) && "remoteSell".equals(remoteSell) ) {
+							context.insuredAmount = 100000;
+							context.getRiderOfSpec('63564').insuredAmount = 100000;
+							 
+							context.getRiderOfSpec('61966').insuredAmount = 300000;
+							context.getRiderOfSpec('61905').insuredAmount = 500000;
+							if ( context.benefitPeriod >= 1 && context.benefitPeriod <= 5 ){
+								context.premium = 119;
+								context.getRiderOfSpec('63564').premium = 1;
+								 
+								context.getRiderOfSpec('61966').premium = 1;
+								context.getRiderOfSpec('61905').premium = 1;
+								context.setSmfProperty("grossPremiumZX",new BigDecimal(122)); 
+							} else if ( context.benefitPeriod >= 6 && context.benefitPeriod <= 7 ){
+								context.premium = 167;
+								context.getRiderOfSpec('63564').premium = 1;
+								 
+								context.getRiderOfSpec('61966').premium = 1;
+								context.getRiderOfSpec('61905').premium = 1;
+								context.setSmfProperty("grossPremiumZX",new BigDecimal(170));
+							} else if ( context.benefitPeriod >= 8 && context.benefitPeriod <= 10 ){
+								context.premium = 217;
+								context.getRiderOfSpec('63564').premium = 1;
+								 
+								context.getRiderOfSpec('61966').premium = 1;
+								context.getRiderOfSpec('61905').premium = 1;
+								context.setSmfProperty("grossPremiumZX",new BigDecimal(220));
+							} else if ( context.benefitPeriod >= 11 && context.benefitPeriod <= 14 ){
+								context.premium = 270;
+								context.getRiderOfSpec('63564').premium = 1;
+								 
+								context.getRiderOfSpec('61966').premium = 1;
+								context.getRiderOfSpec('61905').premium = 1;
+								context.setSmfProperty("grossPremiumZX",new BigDecimal(273));
+							} else if ( context.benefitPeriod >= 15 && context.benefitPeriod <= 21 ){
+								context.premium = 317;
+								context.getRiderOfSpec('63564').premium = 1;
+								 
+								context.getRiderOfSpec('61966').premium = 1;
+								context.getRiderOfSpec('61905').premium = 1;
+								context.setSmfProperty("grossPremiumZX",new BigDecimal(320));
+							} else if ( context.benefitPeriod >= 22 && context.benefitPeriod <= 30 ){
+								context.premium = 376;
+								context.getRiderOfSpec('63564').premium = 1;
+								 
+								context.getRiderOfSpec('61966').premium = 1;
+								context.getRiderOfSpec('61905').premium = 1;
+								context.setSmfProperty("grossPremiumZX",new BigDecimal(379));
+							} else if ( context.benefitPeriod >= 31 && context.benefitPeriod <= 45 ){
+								context.premium = 470;
+								context.getRiderOfSpec('63564').premium = 1;
+								 
+								context.getRiderOfSpec('61966').premium = 1;
+								context.getRiderOfSpec('61905').premium = 1;
+								context.setSmfProperty("grossPremiumZX",new BigDecimal(473));
+							} else if ( context.benefitPeriod >= 46 && context.benefitPeriod <= 60 ){
+								context.premium = 575;
+								context.getRiderOfSpec('63564').premium = 1;
+								 
+								context.getRiderOfSpec('61966').premium = 1;
+								context.getRiderOfSpec('61905').premium = 1;
+								context.setSmfProperty("grossPremiumZX",new BigDecimal(578));
+							} else if ( context.benefitPeriod >= 61 && context.benefitPeriod <= 75 ){
+								context.premium = 692;
+								context.getRiderOfSpec('63564').premium = 1;
+								 
+								context.getRiderOfSpec('61966').premium = 1;
+								context.getRiderOfSpec('61905').premium = 1;
+								context.setSmfProperty("grossPremiumZX",new BigDecimal(695));
+							} else if ( context.benefitPeriod >= 76 && context.benefitPeriod <= 90 ){
+								context.premium = 807;
+								context.getRiderOfSpec('63564').premium = 1;
+								 
+								context.getRiderOfSpec('61966').premium = 1;
+								context.getRiderOfSpec('61905').premium = 1;
+								context.setSmfProperty("grossPremiumZX",new BigDecimal(810));
+							} else if ( context.benefitPeriod >= 91 && context.benefitPeriod <= 180 ){
+								context.premium = 1092;
+								context.getRiderOfSpec('63564').premium = 1;
+								 
+								context.getRiderOfSpec('61966').premium = 1;
+								context.getRiderOfSpec('61905').premium = 1;
+								context.setSmfProperty("grossPremiumZX",new BigDecimal(1095));
+							} else if ( context.benefitPeriod > 180 ){
+								context.premium = 1485;
+								context.getRiderOfSpec('63564').premium = 1;
+								 
+								context.getRiderOfSpec('61966').premium = 1;
+								context.getRiderOfSpec('61905').premium = 1;
+								context.setSmfProperty("grossPremiumZX",new BigDecimal(1488));
+							}
+						} else if ("B".equals(plan) && "remoteSell".equals(remoteSell) ) {
+								context.insuredAmount = 300000;
+								context.getRiderOfSpec('63564').insuredAmount = 300000;
+								 
+								context.getRiderOfSpec('61966').insuredAmount = 400000;
+								context.getRiderOfSpec('61905').insuredAmount = 500000;
+								if ( context.benefitPeriod >= 1 && context.benefitPeriod <= 5 ){
+									context.premium = 136;
+									context.getRiderOfSpec('63564').premium = 1;
+									 
+									context.getRiderOfSpec('61966').premium = 1;
+									context.getRiderOfSpec('61905').premium = 1;
+									context.setSmfProperty("grossPremiumZX",new BigDecimal(139));
+								} else if ( context.benefitPeriod >= 6 && context.benefitPeriod <= 7 ){
+									context.premium = 274;
+									context.getRiderOfSpec('63564').premium = 1;
+									 
+									context.getRiderOfSpec('61966').premium = 1;
+									context.getRiderOfSpec('61905').premium = 1;
+									context.setSmfProperty("grossPremiumZX",new BigDecimal(277));
+								} else if ( context.benefitPeriod >= 8 && context.benefitPeriod <= 10 ){
+									context.premium = 300;
+									context.getRiderOfSpec('63564').premium = 1;
+									 
+									context.getRiderOfSpec('61966').premium = 1;
+									context.getRiderOfSpec('61905').premium = 1;
+									context.setSmfProperty("grossPremiumZX",new BigDecimal(303));
+								} else if ( context.benefitPeriod >= 11 && context.benefitPeriod <= 14 ){
+									context.premium = 347;
+									context.getRiderOfSpec('63564').premium = 1;
+									 
+									context.getRiderOfSpec('61966').premium = 1;
+									context.getRiderOfSpec('61905').premium = 1;
+									context.setSmfProperty("grossPremiumZX",new BigDecimal(350));
+								} else if ( context.benefitPeriod >= 15 && context.benefitPeriod <= 21 ){
+									context.premium = 433;
+									context.getRiderOfSpec('63564').premium = 1;
+									 
+									context.getRiderOfSpec('61966').premium = 1;
+									context.getRiderOfSpec('61905').premium = 1;
+									context.setSmfProperty("grossPremiumZX",new BigDecimal(436));
+								} else if ( context.benefitPeriod >= 22 && context.benefitPeriod <= 30 ){
+									context.premium = 482;
+									context.getRiderOfSpec('63564').premium = 1;
+									 
+									context.getRiderOfSpec('61966').premium = 1;
+									context.getRiderOfSpec('61905').premium = 1;
+									context.setSmfProperty("grossPremiumZX",new BigDecimal(485));
+								} else if ( context.benefitPeriod >= 31 && context.benefitPeriod <= 45 ){
+									context.premium = 595;
+									context.getRiderOfSpec('63564').premium = 1;
+									 
+									context.getRiderOfSpec('61966').premium = 1;
+									context.getRiderOfSpec('61905').premium = 1;
+									context.setSmfProperty("grossPremiumZX",new BigDecimal(598));
+								} else if ( context.benefitPeriod >= 46 && context.benefitPeriod <= 60 ){
+									context.premium = 705;
+									context.getRiderOfSpec('63564').premium = 1;
+									 
+									context.getRiderOfSpec('61966').premium = 1;
+									context.getRiderOfSpec('61905').premium = 1;
+									context.setSmfProperty("grossPremiumZX",new BigDecimal(708));
+								} else if ( context.benefitPeriod >= 61 && context.benefitPeriod <= 75 ){
+									context.premium = 872;
+									context.getRiderOfSpec('63564').premium = 1;
+									 
+									context.getRiderOfSpec('61966').premium = 1;
+									context.getRiderOfSpec('61905').premium = 1;
+									context.setSmfProperty("grossPremiumZX",new BigDecimal(875));
+								} else if ( context.benefitPeriod >= 76 && context.benefitPeriod <= 90 ){
+									context.premium = 1082;
+									context.getRiderOfSpec('63564').premium = 1;
+									 
+									context.getRiderOfSpec('61966').premium = 1;
+									context.getRiderOfSpec('61905').premium = 1;
+									context.setSmfProperty("grossPremiumZX",new BigDecimal(1085));
+								} else if ( context.benefitPeriod >= 91 && context.benefitPeriod <= 180 ){
+									context.premium = 1305;
+									context.getRiderOfSpec('63564').premium = 1;
+									 
+									context.getRiderOfSpec('61966').premium = 1;
+									context.getRiderOfSpec('61905').premium = 1;
+									context.setSmfProperty("grossPremiumZX",new BigDecimal(1308));
+								} else if ( context.benefitPeriod > 180 ){
+									context.premium = 1747;
+									context.getRiderOfSpec('63564').premium = 1;
+									 
+									context.getRiderOfSpec('61966').premium = 1;
+									context.getRiderOfSpec('61905').premium = 1;
+									context.setSmfProperty("grossPremiumZX",new BigDecimal(1750));
+								}
+						} else if ("C".equals(plan) && "remoteSell".equals(remoteSell) ) {
+								context.insuredAmount = 400000;
+								context.getRiderOfSpec('63564').insuredAmount = 400000;
+								 
+								context.getRiderOfSpec('61966').insuredAmount = 500000;
+								context.getRiderOfSpec('61905').insuredAmount = 500000;
+								if ( context.benefitPeriod >= 1 && context.benefitPeriod <= 5 ){
+									context.premium = 156;
+									context.getRiderOfSpec('63564').premium = 1;
+									 
+									context.getRiderOfSpec('61966').premium = 1;
+									context.getRiderOfSpec('61905').premium = 1;
+									context.setSmfProperty("grossPremiumZX",new BigDecimal(159));
+								} else if ( context.benefitPeriod >= 6 && context.benefitPeriod <= 7 ){
+									context.premium = 303;
+									context.getRiderOfSpec('63564').premium = 1;
+									 
+									context.getRiderOfSpec('61966').premium = 1;
+									context.getRiderOfSpec('61905').premium = 1;
+									context.setSmfProperty("grossPremiumZX",new BigDecimal(306));
+								} else if ( context.benefitPeriod >= 8 && context.benefitPeriod <= 10 ){
+									context.premium = 333;
+									context.getRiderOfSpec('63564').premium = 1;
+									 
+									context.getRiderOfSpec('61966').premium = 1;
+									context.getRiderOfSpec('61905').premium = 1;
+									context.setSmfProperty("grossPremiumZX",new BigDecimal(336));
+								} else if ( context.benefitPeriod >= 11 && context.benefitPeriod <= 14 ){
+									context.premium = 392;
+									context.getRiderOfSpec('63564').premium = 1;
+									 
+									context.getRiderOfSpec('61966').premium = 1;
+									context.getRiderOfSpec('61905').premium = 1;
+									context.setSmfProperty("grossPremiumZX",new BigDecimal(395));
+								} else if ( context.benefitPeriod >= 15 && context.benefitPeriod <= 21 ){
+									context.premium = 477;
+									context.getRiderOfSpec('63564').premium = 1;
+									 
+									context.getRiderOfSpec('61966').premium = 1;
+									context.getRiderOfSpec('61905').premium = 1;
+									context.setSmfProperty("grossPremiumZX",new BigDecimal(480));
+								} else if ( context.benefitPeriod >= 22 && context.benefitPeriod <= 30 ){
+									context.premium = 599;
+									context.getRiderOfSpec('63564').premium = 1;
+									 
+									context.getRiderOfSpec('61966').premium = 1;
+									context.getRiderOfSpec('61905').premium = 1;
+									context.setSmfProperty("grossPremiumZX",new BigDecimal(602));
+								} else if ( context.benefitPeriod >= 31 && context.benefitPeriod <= 45 ){
+									context.premium = 747;
+									context.getRiderOfSpec('63564').premium = 1;
+									 
+									context.getRiderOfSpec('61966').premium = 1;
+									context.getRiderOfSpec('61905').premium = 1;
+									context.setSmfProperty("grossPremiumZX",new BigDecimal(750));
+								} else if ( context.benefitPeriod >= 46 && context.benefitPeriod <= 60 ){
+									context.premium = 895;
+									context.getRiderOfSpec('63564').premium = 1;
+									 
+									context.getRiderOfSpec('61966').premium = 1;
+									context.getRiderOfSpec('61905').premium = 1;
+									context.setSmfProperty("grossPremiumZX",new BigDecimal(898));
+								} else if ( context.benefitPeriod >= 61 && context.benefitPeriod <= 75 ){
+									context.premium = 1052;
+									context.getRiderOfSpec('63564').premium = 1;
+									 
+									context.getRiderOfSpec('61966').premium = 1;
+									context.getRiderOfSpec('61905').premium = 1;
+									context.setSmfProperty("grossPremiumZX",new BigDecimal(1055));
+								} else if ( context.benefitPeriod >= 76 && context.benefitPeriod <= 90 ){
+									context.premium = 1185;
+									context.getRiderOfSpec('63564').premium = 1;
+									 
+									context.getRiderOfSpec('61966').premium = 1;
+									context.getRiderOfSpec('61905').premium = 1;
+									context.setSmfProperty("grossPremiumZX",new BigDecimal(1188));
+								} else if ( context.benefitPeriod >= 91 && context.benefitPeriod <= 180 ){
+									context.premium = 1593;
+									context.getRiderOfSpec('63564').premium = 1;
+									 
+									context.getRiderOfSpec('61966').premium = 1;
+									context.getRiderOfSpec('61905').premium = 1;
+									context.setSmfProperty("grossPremiumZX",new BigDecimal(1596));
+								} else if ( context.benefitPeriod > 180 ){
+									context.premium = 1975;
+									context.getRiderOfSpec('63564').premium = 1;
+									 
+									context.getRiderOfSpec('61966').premium = 1;
+									context.getRiderOfSpec('61905').premium = 1;
+									context.setSmfProperty("grossPremiumZX",new BigDecimal(1978));
+								}
+						} else if ("D".equals(plan) && "remoteSell".equals(remoteSell) ) {
+								context.insuredAmount = 500000;
+								context.getRiderOfSpec('63564').insuredAmount = 500000;
+								 
+								context.getRiderOfSpec('61966').insuredAmount = 500000;
+								context.getRiderOfSpec('61905').insuredAmount = 500000;
+								if ( context.benefitPeriod >= 1 && context.benefitPeriod <= 5 ){
+									context.premium = 200;
+									context.getRiderOfSpec('63564').premium = 1;
+									 
+									context.getRiderOfSpec('61966').premium = 1;
+									context.getRiderOfSpec('61905').premium = 1;
+									context.setSmfProperty("grossPremiumZX",new BigDecimal(203));
+								} else if ( context.benefitPeriod >= 6 && context.benefitPeriod <= 7 ){
+									context.premium = 392;
+									context.getRiderOfSpec('63564').premium = 1;
+									 
+									context.getRiderOfSpec('61966').premium = 1;
+									context.getRiderOfSpec('61905').premium = 1;
+									context.setSmfProperty("grossPremiumZX",new BigDecimal(395));
+								} else if ( context.benefitPeriod >= 8 && context.benefitPeriod <= 10 ){
+									context.premium = 429;
+									context.getRiderOfSpec('63564').premium = 1;
+									 
+									context.getRiderOfSpec('61966').premium = 1;
+									context.getRiderOfSpec('61905').premium = 1;
+									context.setSmfProperty("grossPremiumZX",new BigDecimal(432));
+								} else if ( context.benefitPeriod >= 11 && context.benefitPeriod <= 14 ){
+									context.premium = 506;
+									context.getRiderOfSpec('63564').premium = 1;
+									 
+									context.getRiderOfSpec('61966').premium = 1;
+									context.getRiderOfSpec('61905').premium = 1;
+									context.setSmfProperty("grossPremiumZX",new BigDecimal(509));
+								} else if ( context.benefitPeriod >= 15 && context.benefitPeriod <= 21 ){
+									context.premium = 622;
+									context.getRiderOfSpec('63564').premium = 1;
+									 
+									context.getRiderOfSpec('61966').premium = 1;
+									context.getRiderOfSpec('61905').premium = 1;
+									context.setSmfProperty("grossPremiumZX",new BigDecimal(625));
+								} else if ( context.benefitPeriod >= 22 && context.benefitPeriod <= 30 ){
+									context.premium = 774;
+									context.getRiderOfSpec('63564').premium = 1;
+									 
+									context.getRiderOfSpec('61966').premium = 1;
+									context.getRiderOfSpec('61905').premium = 1;
+									context.setSmfProperty("grossPremiumZX",new BigDecimal(777));
+								} else if ( context.benefitPeriod >= 31 && context.benefitPeriod <= 45 ){
+									context.premium = 966;
+									context.getRiderOfSpec('63564').premium = 1;
+									 
+									context.getRiderOfSpec('61966').premium = 1;
+									context.getRiderOfSpec('61905').premium = 1;
+									context.setSmfProperty("grossPremiumZX",new BigDecimal(969));
+								} else if ( context.benefitPeriod >= 46 && context.benefitPeriod <= 60 ){
+									context.premium = 1147;
+									context.getRiderOfSpec('63564').premium = 1;
+									 
+									context.getRiderOfSpec('61966').premium = 1;
+									context.getRiderOfSpec('61905').premium = 1;
+									context.setSmfProperty("grossPremiumZX",new BigDecimal(1150));
+								} else if ( context.benefitPeriod >= 61 && context.benefitPeriod <= 75 ){
+									context.premium = 1349;
+									context.getRiderOfSpec('63564').premium = 1;
+									 
+									context.getRiderOfSpec('61966').premium = 1;
+									context.getRiderOfSpec('61905').premium = 1;
+									context.setSmfProperty("grossPremiumZX",new BigDecimal(1352));
+								} else if ( context.benefitPeriod >= 76 && context.benefitPeriod <= 90 ){
+									context.premium = 1525;
+									context.getRiderOfSpec('63564').premium = 1;
+									 
+									context.getRiderOfSpec('61966').premium = 1;
+									context.getRiderOfSpec('61905').premium = 1;
+									context.setSmfProperty("grossPremiumZX",new BigDecimal(1528));
+								} else if ( context.benefitPeriod >= 91 && context.benefitPeriod <= 180 ){
+									context.premium = 1722;
+									context.getRiderOfSpec('63564').premium = 1;
+									 
+									context.getRiderOfSpec('61966').premium = 1;
+									context.getRiderOfSpec('61905').premium = 1;
+									context.setSmfProperty("grossPremiumZX",new BigDecimal(1725));
+								} else if ( context.benefitPeriod > 180 ){
+									context.premium = 2115;
+									context.getRiderOfSpec('63564').premium = 1;
+									 
+									context.getRiderOfSpec('61966').premium = 1;
+									context.getRiderOfSpec('61905').premium = 1;
+									context.setSmfProperty("grossPremiumZX",new BigDecimal(2118));
+								}
+						} else if ("E".equals(plan) && "remoteSell".equals(remoteSell) ) {
+								context.insuredAmount = 1000000;
+								context.getRiderOfSpec('63564').insuredAmount = 1000000;
+							 
+								context.getRiderOfSpec('61966').insuredAmount = 500000;
+								context.getRiderOfSpec('61905').insuredAmount = 500000;
+								if ( context.benefitPeriod >= 1 && context.benefitPeriod <= 5 ){
+									context.premium = 253;
+									context.getRiderOfSpec('63564').premium = 1;
+									 
+									context.getRiderOfSpec('61966').premium = 1;
+									context.getRiderOfSpec('61905').premium = 1;
+									context.setSmfProperty("grossPremiumZX",new BigDecimal(256));
+								} else if ( context.benefitPeriod >= 6 && context.benefitPeriod <= 7 ){
+									context.premium = 479;
+									context.getRiderOfSpec('63564').premium = 1;
+									 
+									context.getRiderOfSpec('61966').premium = 1;
+									context.getRiderOfSpec('61905').premium = 1;
+									context.setSmfProperty("grossPremiumZX",new BigDecimal(482));
+								} else if ( context.benefitPeriod >= 8 && context.benefitPeriod <= 10 ){
+									context.premium = 526;
+									context.getRiderOfSpec('63564').premium = 1;
+									 
+									context.getRiderOfSpec('61966').premium = 1;
+									context.getRiderOfSpec('61905').premium = 1;
+									context.setSmfProperty("grossPremiumZX",new BigDecimal(529));
+								} else if ( context.benefitPeriod >= 11 && context.benefitPeriod <= 14 ){
+									context.premium = 620;
+									context.getRiderOfSpec('63564').premium = 1;
+									 
+									context.getRiderOfSpec('61966').premium = 1;
+									context.getRiderOfSpec('61905').premium = 1;
+									context.setSmfProperty("grossPremiumZX",new BigDecimal(623));
+								} else if ( context.benefitPeriod >= 15 && context.benefitPeriod <= 21 ){
+									context.premium = 762;
+									context.getRiderOfSpec('63564').premium = 1;
+									 
+									context.getRiderOfSpec('61966').premium = 1;
+									context.getRiderOfSpec('61905').premium = 1;
+									context.setSmfProperty("grossPremiumZX",new BigDecimal(765));
+								} else if ( context.benefitPeriod >= 22 && context.benefitPeriod <= 30 ){
+									context.premium = 949;
+									context.getRiderOfSpec('63564').premium = 1;
+									 
+									context.getRiderOfSpec('61966').premium = 1;
+									context.getRiderOfSpec('61905').premium = 1;
+									context.setSmfProperty("grossPremiumZX",new BigDecimal(952));
+								} else if ( context.benefitPeriod >= 31 && context.benefitPeriod <= 45 ){
+									context.premium = 1185;
+									context.getRiderOfSpec('63564').premium = 1;
+									 
+									context.getRiderOfSpec('61966').premium = 1;
+									context.getRiderOfSpec('61905').premium = 1;
+									context.setSmfProperty("grossPremiumZX",new BigDecimal(1188));
+								} else if ( context.benefitPeriod >= 46 && context.benefitPeriod <= 60 ){
+									context.premium = 1415;
+									context.getRiderOfSpec('63564').premium = 1;
+									 
+									context.getRiderOfSpec('61966').premium = 1;
+									context.getRiderOfSpec('61905').premium = 1;
+									context.setSmfProperty("grossPremiumZX",new BigDecimal(1418));
+								} else if ( context.benefitPeriod >= 61 && context.benefitPeriod <= 75 ){
+									context.premium = 1507;
+									context.getRiderOfSpec('63564').premium = 1;
+									 
+									context.getRiderOfSpec('61966').premium = 1;
+									context.getRiderOfSpec('61905').premium = 1;
+									context.setSmfProperty("grossPremiumZX",new BigDecimal(1510));
+								} else if ( context.benefitPeriod >= 76 && context.benefitPeriod <= 90 ){
+									context.premium = 1655;
+									context.getRiderOfSpec('63564').premium = 1;
+									 
+									context.getRiderOfSpec('61966').premium = 1;
+									context.getRiderOfSpec('61905').premium = 1;
+									context.setSmfProperty("grossPremiumZX",new BigDecimal(1658));
+								} else if ( context.benefitPeriod >= 91 && context.benefitPeriod <= 180 ){
+									context.premium = 2125;
+									context.getRiderOfSpec('63564').premium = 1;
+									 
+									context.getRiderOfSpec('61966').premium = 1;
+									context.getRiderOfSpec('61905').premium = 1;
+									context.setSmfProperty("grossPremiumZX",new BigDecimal(2128));
+								} else if ( context.benefitPeriod > 180 ){
+									context.premium = 2597;
+									context.getRiderOfSpec('63564').premium = 1;
+									 
+									context.getRiderOfSpec('61966').premium = 1;
+									context.getRiderOfSpec('61905').premium = 1;
+									context.setSmfProperty("grossPremiumZX",new BigDecimal(2600));
+								}
+						} else if ("F".equals(plan) && "remoteSell".equals(remoteSell) ) {
+								context.insuredAmount = 2000000;
+								context.getRiderOfSpec('63564').insuredAmount = 2000000;
+								 
+								context.getRiderOfSpec('61966').insuredAmount = 500000;
+								context.getRiderOfSpec('61905').insuredAmount = 500000;
+								if ( context.benefitPeriod >= 1 && context.benefitPeriod <= 5 ){
+									context.premium = 287;
+									context.getRiderOfSpec('63564').premium = 1;
+									 
+									context.getRiderOfSpec('61966').premium = 1;
+									context.getRiderOfSpec('61905').premium = 1;
+									context.setSmfProperty("grossPremiumZX",new BigDecimal(290));
+								} else if ( context.benefitPeriod >= 6 && context.benefitPeriod <= 7 ){
+									context.premium = 566;
+									context.getRiderOfSpec('63564').premium = 1;
+									 
+									context.getRiderOfSpec('61966').premium = 1;
+									context.getRiderOfSpec('61905').premium = 1;
+									context.setSmfProperty("grossPremiumZX",new BigDecimal(569));
+								} else if ( context.benefitPeriod >= 8 && context.benefitPeriod <= 10 ){
+									context.premium = 622;
+									context.getRiderOfSpec('63564').premium = 1;
+									 
+									context.getRiderOfSpec('61966').premium = 1;
+									context.getRiderOfSpec('61905').premium = 1;
+									context.setSmfProperty("grossPremiumZX",new BigDecimal(625));
+								} else if ( context.benefitPeriod >= 11 && context.benefitPeriod <= 14 ){
+									context.premium = 734;
+									context.getRiderOfSpec('63564').premium = 1;
+									 
+									context.getRiderOfSpec('61966').premium = 1;
+									context.getRiderOfSpec('61905').premium = 1;
+									context.setSmfProperty("grossPremiumZX",new BigDecimal(737));
+								} else if ( context.benefitPeriod >= 15 && context.benefitPeriod <= 21 ){
+									context.premium = 905;
+									context.getRiderOfSpec('63564').premium = 1;
+									 
+									context.getRiderOfSpec('61966').premium = 1;
+									context.getRiderOfSpec('61905').premium = 1;
+									context.setSmfProperty("grossPremiumZX",new BigDecimal(908));
+								} else if ( context.benefitPeriod >= 22 && context.benefitPeriod <= 30 ){
+									context.premium = 1125;
+									context.getRiderOfSpec('63564').premium = 1;
+									 
+									context.getRiderOfSpec('61966').premium = 1;
+									context.getRiderOfSpec('61905').premium = 1;
+									context.setSmfProperty("grossPremiumZX",new BigDecimal(1128));
+								} else if ( context.benefitPeriod >= 31 && context.benefitPeriod <= 45 ){
+									context.premium = 1404;
+									context.getRiderOfSpec('63564').premium = 1;
+									 
+									context.getRiderOfSpec('61966').premium = 1;
+									context.getRiderOfSpec('61905').premium = 1;
+									context.setSmfProperty("grossPremiumZX",new BigDecimal(1407));
+								} else if ( context.benefitPeriod >= 46 && context.benefitPeriod <= 60 ){
+									context.premium = 1695;
+									context.getRiderOfSpec('63564').premium = 1;
+									 
+									context.getRiderOfSpec('61966').premium = 1;
+									context.getRiderOfSpec('61905').premium = 1;
+									context.setSmfProperty("grossPremiumZX",new BigDecimal(1698));
+								} else if ( context.benefitPeriod >= 61 && context.benefitPeriod <= 75 ){
+									context.premium = 1822;
+									context.getRiderOfSpec('63564').premium = 1;
+									 
+									context.getRiderOfSpec('61966').premium = 1;
+									context.getRiderOfSpec('61905').premium = 1;
+									context.setSmfProperty("grossPremiumZX",new BigDecimal(122))1825;
+								} else if ( context.benefitPeriod >= 76 && context.benefitPeriod <= 90 ){
+									context.premium = 1962;
+									context.getRiderOfSpec('63564').premium = 1;
+									 
+									context.getRiderOfSpec('61966').premium = 1;
+									context.getRiderOfSpec('61905').premium = 1;
+									context.setSmfProperty("grossPremiumZX",new BigDecimal(1965));
+								} else if ( context.benefitPeriod >= 91 && context.benefitPeriod <= 180 ){
+									context.premium = 2506;
+									context.getRiderOfSpec('63564').premium = 1;
+									 
+									context.getRiderOfSpec('61966').premium = 1;
+									context.getRiderOfSpec('61905').premium = 1;
+									context.setSmfProperty("grossPremiumZX",new BigDecimal(2509));
+								} else if ( context.benefitPeriod > 180 ){
+									context.premium = 3079;
+									context.getRiderOfSpec('63564').premium = 1;
+									 
+									context.getRiderOfSpec('61966').premium = 1;
+									context.getRiderOfSpec('61905').premium = 1;
+									context.setSmfProperty("grossPremiumZX",new BigDecimal(3082));
+								}			
+						}
+			]]>
+			</body>
+		</calculation>
+	</calculations>
+	<components>
+		<component minOccurrence="1" maxOccurrence="1" seqIndex="0">
+			<coverage kind="Coverage" name="人保寿险境外意外伤害保险（新标准版）-意外伤残" seqIndex="1" externalReference="63564" shortName="境外意外伤害保险（新标准版）-意外伤残" instanceClassName="CoverageComponent">
+				<description>人保寿险境外意外伤害保险（新标准版）-意外伤残</description>
+				<baseSpec version="0"/>
+				<properties>
+					<property kind="premium" name="保费" seqIndex="200" dataType="Decimal" beanProperty="true" isHidden="false" required="true" derived="false"/>
+					<property kind="insuredAmount" name="意外伤残" seqIndex="300" dataType="Decimal" beanProperty="true" isHidden="false" required="false" derived="false"/>
+				</properties>
+			</coverage>
+		</component>
+		<component minOccurrence="1" maxOccurrence="1" seqIndex="0">
+			<coverage kind="Coverage" name="人保寿险附加境外紧急救援医疗保险（A款）-住院医疗费用" seqIndex="2" externalReference="61966" shortName="人保寿险附加境外紧急救援医疗保险（A款）-住院医疗费用" instanceClassName="CoverageComponent">
+				<description>人保寿险附加境外紧急救援医疗保险（A款）-住院医疗费用</description>
+				<baseSpec version="0"/>
+				<properties>
+					<property kind="premium" name="保费" seqIndex="200" dataType="Decimal" beanProperty="true" isHidden="false" required="true" derived="false"/>
+					<property kind="insuredAmount" name="住院医疗保额" seqIndex="300" dataType="Decimal" beanProperty="true" isHidden="false" required="false" derived="false"/>
+				</properties>
+			</coverage>
+		</component>
+		
+		
+		<component minOccurrence="1" maxOccurrence="1" seqIndex="0">
+			<coverage kind="Coverage" name="人保寿险附加境外紧急救援医疗保险（A款）-紧急救援" seqIndex="3" externalReference="61905" shortName="人保寿险附加境外紧急救援医疗保险（A款）-紧急救援" instanceClassName="CoverageComponent">
+				<description>人保寿险附加境外紧急救援医疗保险（A款）-紧急救援</description>
+				<baseSpec version="0"/>
+				<properties>
+					<property kind="premium" name="保费" seqIndex="200" dataType="Decimal" beanProperty="true" isHidden="false" required="true" derived="false"/>
+					<property kind="insuredAmount" name="紧急救援保额" seqIndex="300" dataType="Decimal" beanProperty="true" isHidden="false" required="false" derived="false"/>
+				</properties>
+			</coverage>
+		</component>
+		
+		
+		<component minOccurrence="1" maxOccurrence="1" seqIndex="0">
+			<coverage kind="Coverage" name="人保寿险附加境外紧急救援医疗保险（A款）-牙科门诊" seqIndex="4" externalReference="61948" shortName="人保寿险附加境外紧急救援医疗保险（A款）-牙科门诊" instanceClassName="CoverageComponent">
+				<description>人保寿险附加境外紧急救援医疗保险（A款）-牙科门诊</description>
+				<baseSpec version="0"/>
+				<properties>
+					<property kind="premium" name="保费" seqIndex="200" dataType="Decimal" beanProperty="true" isHidden="false" required="true" derived="false"/>
+					<property kind="insuredAmount" name="牙科门诊保额" seqIndex="300" dataType="Decimal" beanProperty="true" isHidden="false" required="false" derived="false"/>
+				</properties>
+			</coverage>
+		</component>
+		
+		
+		<component minOccurrence="1" maxOccurrence="1" seqIndex="0">
+			<coverage kind="Coverage" name="人保寿险附加境外紧急救援医疗保险（A款）-门诊" seqIndex="5" externalReference="61925" shortName="人保寿险附加境外紧急救援医疗保险（A款）-门诊" instanceClassName="CoverageComponent">
+				<description>人保寿险附加境外紧急救援医疗保险（A款）-门诊</description>
+				<baseSpec version="0"/>
+				<properties>
+					<property kind="premium" name="保费" seqIndex="200" dataType="Decimal" beanProperty="true" isHidden="false" required="true" derived="false"/>
+					<property kind="insuredAmount" name="境外紧急门诊保额" seqIndex="300" dataType="Decimal" beanProperty="true" isHidden="false" required="false" derived="false"/>
+				</properties>
+			</coverage>
+		</component>
+	</components>
+</product>
